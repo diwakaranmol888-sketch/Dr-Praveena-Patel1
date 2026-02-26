@@ -12,7 +12,7 @@ export const doctorInfo = {
 export const contactInfo = {
   address: "H no. 790, Gandhi Nagar, Lok Nagar, Unnao, Uttar Pradesh 209801",
   phones: ["09264951091", "08401268642"],
-  email: "drpravinapatel@example.com",
+  email: "",
   city: "Unnao"
 };
 

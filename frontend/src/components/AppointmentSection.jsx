@@ -89,20 +89,22 @@ const AppointmentSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-teal-100 rounded-full p-3 flex-shrink-0">
-                    <Mail className="w-6 h-6 text-teal-600" />
+                {contactInfo.email && (
+                  <div className="flex items-start gap-4">
+                    <div className="bg-teal-100 rounded-full p-3 flex-shrink-0">
+                      <Mail className="w-6 h-6 text-teal-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                      <a 
+                        href={`mailto:${contactInfo.email}`}
+                        className="text-teal-600 hover:text-teal-700"
+                      >
+                        {contactInfo.email}
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a 
-                      href={`mailto:${contactInfo.email}`}
-                      className="text-teal-600 hover:text-teal-700"
-                    >
-                      {contactInfo.email}
-                    </a>
-                  </div>
-                </div>
+                )}
 
                 <div className="flex items-start gap-4">
                   <div className="bg-teal-100 rounded-full p-3 flex-shrink-0">
@@ -110,8 +112,7 @@ const AppointmentSection = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Clinic Hours</h3>
-                    <p className="text-gray-600">Mon - Sat: 10:00 AM - 7:00 PM</p>
-                    <p className="text-gray-600">Sunday: By Appointment</p>
+                    <p className="text-gray-600">Tuesday & Friday: 10:00 AM - 02:00 PM</p>
                   </div>
                 </div>
               </CardContent>

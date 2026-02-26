@@ -81,15 +81,17 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-teal-400 flex-shrink-0 mt-1" />
-                <a 
-                  href={`mailto:${contactInfo.email}`}
-                  className="text-gray-400 hover:text-teal-400 transition-colors text-sm"
-                >
-                  {contactInfo.email}
-                </a>
-              </div>
+              {contactInfo.email && (
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-teal-400 flex-shrink-0 mt-1" />
+                  <a 
+                    href={`mailto:${contactInfo.email}`}
+                    className="text-gray-400 hover:text-teal-400 transition-colors text-sm"
+                  >
+                    {contactInfo.email}
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
